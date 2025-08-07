@@ -1,0 +1,131 @@
+/*
+  CSS Reset
+  A simple reset to remove default browser styles.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+img,
+picture {
+    display: block;
+    max-width: 100%;
+
+    object-fit: cover;
+}
+
+:root {
+    --clr-primary-500: hsl(158, 36%, 37%);
+    --clr-primary-700: hsl(158, 42%, 18%);
+
+    --clr-neutral-900: hsl(212, 21%, 14%);
+    --clr-neutral-400: hsl(228, 12%, 48%);
+    --clr-neutral-200: hsl(30, 38%, 92%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+}
+
+body {
+    background-color: var(--clr-neutral-200);
+    min-height: 100vh;
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.product-card {
+    max-width: 800px;
+    border-radius: 10px;
+    background-color: var(--clr-neutral-100);
+    overflow: hidden;
+    display: grid;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: var(--fw-bold);
+    font-family: "Fraunces", sans-serif;
+    color: var(--clr-neutral-900);
+    line-height: 1;
+}
+
+.product-category {
+    letter-spacing: 0.2rem;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+}
+
+.product-category,
+.product-description,
+.price-old {
+    color: var(--clr-neutral-400);
+}
+
+.product-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.product-description {
+    line-height: 1.6;
+    font-size: 0.875rem;
+}
+
+.price-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.price-current {
+    color: var(--clr-primary-500);
+    font-size: 2rem;
+    font-weight: var(--fw-bold);
+    font-family: "Fraunces", sans-serif;
+}
+
+.price-old {
+    font-size: 0.8rem;
+}
+
+.button {
+    background-color: var(--clr-primary-500);
+    border: none;
+    border-radius: 7px;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--clr-neutral-100);
+    font-weight: var(--fw-bold);
+}
+
+.button:hover {
+    background-color: var(--clr-primary-700);
+    cursor: pointer;
+}
+
+
+@media (min-width: 492px) {
+    .product-card {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product-content {
+        justify-content: space-around;
+    }
+
+    picture img {
+        height: 100%;
+    }
+}
