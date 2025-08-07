@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Zupi-HR/Product-preview-card-component)
-- Live Site URL: [Add live site URL here](https://zupi-hr.github.io/Product-preview-card-component)
+- Solution URL: [repo url](https://github.com/Zupi-HR/Product-preview-card-component)
+- Live Site URL: [live url](https://zupi-hr.github.io/Product-preview-card-component)
 
 ## My process
 
