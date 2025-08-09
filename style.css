@@ -108,11 +108,12 @@ h1 {
     font-size: 1rem;
     color: var(--clr-neutral-100);
     font-weight: var(--fw-bold);
+    cursor: pointer;
 }
 
-.button:hover {
+.button:hover,
+.button:focus-visible {
     background-color: var(--clr-primary-700);
-    cursor: pointer;
 }
 
 
