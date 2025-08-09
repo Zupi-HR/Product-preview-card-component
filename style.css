@@ -40,7 +40,7 @@ body {
 }
 
 .product-card {
-    max-width: 800px;
+    max-width: 37.5rem;
     border-radius: 10px;
     background-color: var(--clr-neutral-100);
     overflow: hidden;
@@ -116,7 +116,7 @@ h1 {
 }
 
 
-@media (min-width: 492px) {
+@media (min-width: 30.75rem) {
     .product-card {
         grid-template-columns: 1fr 1fr;
     }
