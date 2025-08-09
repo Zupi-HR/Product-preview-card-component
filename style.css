@@ -50,11 +50,11 @@ body {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
     font-weight: var(--fw-bold);
     font-family: "Fraunces", sans-serif;
     color: var(--clr-text-heading);
-    line-height: 1;
+    line-height: 1.1;
 }
 
 .product-category {
@@ -83,7 +83,7 @@ h1 {
 
 .price-group {
     display: flex;
-    gap: 1rem;
+    gap: max(1rem, 1.5vw);
     align-items: center;
 }
 
