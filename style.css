@@ -18,20 +18,22 @@ picture {
 }
 
 :root {
-    --clr-primary-500: hsl(158, 36%, 37%);
-    --clr-primary-700: hsl(158, 42%, 18%);
+    --clr-accent: hsl(158, 36%, 37%);
+    --clr-accent-hover: hsl(158, 42%, 18%);
 
-    --clr-neutral-900: hsl(212, 21%, 14%);
-    --clr-neutral-400: hsl(228, 12%, 48%);
-    --clr-neutral-200: hsl(30, 38%, 92%);
-    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-text-heading: hsl(212, 21%, 14%);
+    --clr-text-body: hsl(228, 12%, 48%);
+    --clr-text-on-accent: hsl(0, 0%, 100%);
+
+    --clr-background-main: hsl(30, 38%, 92%);
+    --clr-background-card: hsl(0, 0%, 100%);
 
     --fw-regular: 500;
     --fw-bold: 700;
 }
 
 body {
-    background-color: var(--clr-neutral-200);
+    background-color: var(--clr-background-main);
     min-height: 100vh;
     padding: 1rem;
     display: grid;
@@ -40,9 +42,9 @@ body {
 }
 
 .product-card {
-    max-width: 37.5rem;
+    max-width: min(90vw, 37.5rem);
     border-radius: 10px;
-    background-color: var(--clr-neutral-100);
+    background-color: var(--clr-background-card);
     overflow: hidden;
     display: grid;
 }
@@ -51,7 +53,7 @@ h1 {
     font-size: 2rem;
     font-weight: var(--fw-bold);
     font-family: "Fraunces", sans-serif;
-    color: var(--clr-neutral-900);
+    color: var(--clr-text-heading);
     line-height: 1;
 }
 
@@ -64,7 +66,7 @@ h1 {
 .product-category,
 .product-description,
 .price-old {
-    color: var(--clr-neutral-400);
+    color: var(--clr-text-body);
 }
 
 .product-content {
@@ -86,7 +88,7 @@ h1 {
 }
 
 .price-current {
-    color: var(--clr-primary-500);
+    color: var(--clr-accent);
     font-size: 2rem;
     font-weight: var(--fw-bold);
     font-family: "Fraunces", sans-serif;
@@ -97,7 +99,7 @@ h1 {
 }
 
 .button {
-    background-color: var(--clr-primary-500);
+    background-color: var(--clr-accent);
     border: none;
     border-radius: 7px;
     display: flex;
@@ -106,14 +108,14 @@ h1 {
     align-items: center;
     padding: 1rem;
     font-size: 1rem;
-    color: var(--clr-neutral-100);
+    color: var(--clr-text-on-accent);
     font-weight: var(--fw-bold);
     cursor: pointer;
 }
 
 .button:hover,
 .button:focus-visible {
-    background-color: var(--clr-primary-700);
+    background-color: var(--clr-accent-hover);
 }
 
 
@@ -123,10 +125,11 @@ h1 {
     }
 
     .product-content {
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     picture img {
+        width: 100%;
         height: 100%;
     }
 }
